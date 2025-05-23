@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: black;
+        }
+        .titles{
+             margin-bottom: 40px;
+            margin-top: 0px;
+         }
+        .titles h1{
+            margin-top:100px ;
+            font-size: xx-large;
+            text-align: center;
+            font-weight: 800;
+            color: white;
+
+
+        }
+        .titles p{
+            margin-top: 10px;
+            font-size: large;
+            font-weight: 600;
+            color: white;
+
+        }
+        .inputs{
+            margin-top: 10px;
+             height:80px;
+            width: 450px;
+            justify-content: space-around;
+            display: flex;
+ 
+        }
+        .inputs input{
+            border-radius: 10px;
+            padding: 5px;
+            width: 80%;
+            outline: 0;
+            border: 1px solid rgb(190, 190, 190);
+            margin-right: 10px;
+            background-color: #1F2937;
+            color: #818181;
+
+         }
+         .inputs button{
+             background: linear-gradient(to right, #EC4899, #8B5CF6);
+             -webkit-text-fill-color: transparent;
+             -webkit-background-clip: text;
+             font-size: larger;
+             font-weight: 500;
+             
+          }
+         
+          .tasks{
+             width: 600px;
+            margin-top: 30px;
+            height:100vh;
+              }
+            .task{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                  
+ 
+              }
+            .task .ok{
+                border-radius: 30%;
+                border: 3px solid gray;
+                height: 28px;
+                width: 28px;
+                margin-right: 9px;
+ 
+
+            }
+  
+           
+            
+            .task .card{
+                 height:100%;
+                width: 90%;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #111827;
+                border-radius: 15px;
+
+            }
+            .card .write{
+                color: white;
+                font-size: larger;
+
+            }
+            .hi{
+                text-decoration: line-through;
+            }
+            .flex-btn{
+            border: 0;
+             }
+            .update{
+                background: linear-gradient(to right, #EC4899, #8B5CF6);
+             -webkit-text-fill-color: transparent;
+             -webkit-background-clip: text;
+             font-size: large;
+             font-weight: 500;
+             margin-right:5px ;
+            }
+            .delite{
+                font-size: large;
+                font-weight: 500;
+                color: #DC143C;
+
+            }
+     
+
+    </style>
+</head>
+<body class="">
+    <div class="titles">
+        <h1 class="">Todo List</h1>
+        <p class="">Be More Organized Today</p>
+    </div>
+    <div class="inputs">
+        <input type="text" id="value" placeholder="Write your task here">
+        <button class="" id="btn" onclick="cree()">Create</button>
+
+    </div>
+         <ul class="tasks" id="ul">
+             
+            
+             
+             
+        </ul>
+        <script src="script.js"></script>
+        <script>
+           
+    // ok.innerHTML = ' <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#32d926" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>';
+    
+        </script>
+ </body>
+</html>
