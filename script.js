@@ -1,9 +1,8 @@
-var todos = [
-  
-]
+var todos = JSON.parse(localStorage.getItem('todos')) || []
 function afficher(){
     document.getElementById("ul").innerHTML = ""
-     
+     var todos = JSON.parse(localStorage.getItem('todos')) || []
+
     
     todos.forEach(element => {
         var li = document.createElement("li")
@@ -39,6 +38,7 @@ function cree(){
         time: Date.now()
     }
     todos.push(object)
+    localStorage.setItem('todos', JSON.stringify(todos))
     task.value = ""
     
 
@@ -48,12 +48,16 @@ function delite(time){
     let confirmation = confirm("Delite !!!")
     if(confirmation){
     todos = todos.filter(f => f.time != time)
+    localStorage.setItem('todos', JSON.stringify(todos))
+
     afficher()}
 }
 function check(time){
     let index = todos.findIndex(f => f.time == time)
     if (index !== -1) {
         todos[index].check = !todos[index].check
+    localStorage.setItem('todos', JSON.stringify(todos))
+
         afficher()
     }
 }
@@ -67,7 +71,12 @@ function uppdate(time){
 
     document.getElementById("value").value = value
 
-    todos.splice(index, 1)}
+
+    todos.splice(index, 1)
+    localStorage.setItem('todos', JSON.stringify(todos))
+
+}
+    
     else{
         document.getElementById("value").value = ""}
 
